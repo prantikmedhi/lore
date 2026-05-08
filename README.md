@@ -126,12 +126,12 @@ Lore is an orchestration layer around NotebookLM.
 
 ```mermaid
 flowchart LR
-  A[Sources\nURLs / PDFs / files / notes] --> B[lore-source-manifest\n(optional)]
-  B --> C[lore create / add-source\nNotebookLM notebook]
-  C --> D[lore ask / summarize\nsource-grounded research]
-  D --> E[lore-pipeline\nJSON plan]
-  E --> F[Artifact generators\nMD / PPTX / JSON]
-  F --> G[lore-export-bundle\nindex + handoff]
+  A["Sources<br/>URLs / PDFs / files / notes"] --> B["lore-source-manifest<br/>(optional)"]
+  B --> C["lore create / add-source<br/>NotebookLM notebook"]
+  C --> D["lore ask / summarize<br/>source-grounded research"]
+  D --> E["lore-pipeline<br/>JSON plan"]
+  E --> F["Artifact generators<br/>MD / PPTX / JSON"]
+  F --> G["lore-export-bundle<br/>index + handoff"]
 ```
 
 For deeper notes, see:
