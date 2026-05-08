@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lore"
+version = "0.1.0"
+description = "NotebookLM research automation for cited answers, reports, slide decks, study tools, code explanations, and AI workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Lore Team" }
+]
+keywords = [
+  "notebooklm",
+  "ai-research",
+  "research-automation",
+  "cited-answers",
+  "slide-decks",
+  "flashcards",
+  "quizzes",
+  "mind-maps",
+  "code-explanations",
+  "mcp",
+  "codex",
+  "cursor",
+  "gemini",
+  "copilot"
+]
+dependencies = [
+  "notebooklm-py>=0.3.4",
+  "fastmcp>=2.0.0",
+  "feedparser>=6.0.11",
+  "playwright>=1.44.0",
+  "python-pptx>=0.6.23"
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0"]
+
+[project.scripts]
+lore = "scripts.notebooklm_client:main"
+lore-pipeline = "scripts.pipeline:main"
+lore-mcp = "mcp_server.server:main"
+lore-ppt = "scripts.make_ppt:main"
+lore-report = "scripts.make_report:main"
+lore-study-pack = "scripts.make_study_pack:main"
+lore-podcast-script = "scripts.make_podcast_script:main"
+lore-video-plan = "scripts.make_video_plan:main"
+lore-mind-map = "scripts.make_mind_map:main"
+lore-architecture-summary = "scripts.make_architecture_summary:main"
+lore-code-explanation = "scripts.make_code_explanation:main"
+lore-source-manifest = "scripts.make_source_manifest:main"
+lore-export-bundle = "scripts.export_bundle:main"
+
+[tool.setuptools]
+packages = ["scripts", "mcp_server"]
