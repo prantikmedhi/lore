@@ -32,7 +32,7 @@ dependencies = [
   "notebooklm-py>=0.3.4",
   "fastmcp>=2.0.0",
   "feedparser>=6.0.11",
-  "playwright>=1.44.0",
+  "playwright>=1.59.0",
   "python-pptx>=0.6.23"
 ]
 
