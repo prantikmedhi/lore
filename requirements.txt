@@ -3,4 +3,4 @@ fastmcp>=2.0.0
 feedparser>=6.0.11
 playwright>=1.44.0
 python-pptx>=0.6.23
-pytest>=8.0.0
+pytest>=9.0.3
