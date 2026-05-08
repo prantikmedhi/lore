@@ -256,6 +256,15 @@ See `SECURITY.md` for reporting.
 
 PRs and issues welcome. If you’re proposing a bigger change, open an issue first so we can align on scope.
 
+## Development / Testing
+
+To install development dependencies and run tests:
+
+```bash
+pip install -e '.[dev]'
+pytest
+```
+
 ## Roadmap
 
 - Better client-specific MCP examples (Codex, Cursor, Gemini CLI, OpenClaw)

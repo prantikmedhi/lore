@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.1] - 2026-05-09
+
+### Changed
+
+- Updated `.gitignore` to exclude `clawhub-skill/` artifacts.
+- Added 'Development / Testing' section to README.
+
 ## [0.1.0] - 2026-05-08
 
 ### Added

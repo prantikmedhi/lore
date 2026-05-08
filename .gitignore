@@ -13,6 +13,7 @@ build/
 *.egg-info/
 .env
 .notebooklm/
+clawhub-skill/
 
 *.swp
 *.swo
