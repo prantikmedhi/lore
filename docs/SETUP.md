@@ -17,7 +17,7 @@ This guide explains how to install Lore, authenticate NotebookLM, verify CLI com
 
 ## 2. Install Lore
 
-From the `lore/` directory:
+From the repository root:
 
 ```bash
 pip install -e .

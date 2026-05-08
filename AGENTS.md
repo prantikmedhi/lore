@@ -11,7 +11,6 @@ This repository provides a complete NotebookLM automation layer for AI assistant
 | CLI | `scripts/` | Notebook operations, pipeline planning, artifact builders. |
 | MCP | `mcp_server/` | Tool helpers for MCP-compatible clients. |
 | Skill | `SKILL.md` | Agent behavior and workflow rules. |
-| Plugin | `.codex-plugin/plugin.json` | Codex plugin metadata. |
 | Docs | `docs/` and `references/` | Setup, clients, API surface, output formats, recipes. |
 
 ## Agent Rules

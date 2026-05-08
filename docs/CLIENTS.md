@@ -1,12 +1,12 @@
 # Client Guide
 
-Lore can be used through CLI commands, MCP clients, and Codex plugin metadata.
+Lore can be used through CLI commands and MCP clients.
 
 ## Capability Matrix
 
 | Client | Recommended Surface | Notes |
 |---|---|---|
-| Codex | Plugin + skill + MCP | Use `.codex-plugin/plugin.json`, `SKILL.md`, and `.mcp.json`. |
+| Codex | MCP + skill | Use `SKILL.md` and `.mcp.json`. |
 | Cursor | MCP | Add `.mcp.json` server block to Cursor MCP settings. |
 | Gemini CLI | MCP | Add Lore MCP server block to the Gemini CLI MCP configuration. |
 | Copilot-compatible MCP clients | MCP or CLI fallback | Use MCP if supported. Otherwise run CLI commands and paste JSON/Markdown outputs. |
@@ -20,12 +20,6 @@ Use the root skill:
 
 ```text
 SKILL.md
-```
-
-Or install the plugin metadata:
-
-```text
-.codex-plugin/plugin.json
 ```
 
 Recommended prompt:
