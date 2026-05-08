@@ -38,3 +38,5 @@ This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
 - Documented local NotebookLM session handling.
 - Added guidance against committing credentials, cookies, private sources, and confidential artifacts.
+
+- 2026-05-08: Test commit to verify noreply attribution.
