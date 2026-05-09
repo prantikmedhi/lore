@@ -60,6 +60,8 @@ pip install -e .
 python3 -m playwright install chromium
 ```
 
+*(Optional: Use `uv pip install -e .` for faster installation if you have [uv](https://github.com/astral-sh/uv) installed.)*
+
 Authenticate (one time, refresh when expired):
 
 ```bash

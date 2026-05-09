@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.2] - 2026-05-10
+
+### Changed
+
+- Mentioned `uv` as a faster installation alternative in README.
+- Bumped version to 0.1.2.
+
 ## [0.1.1] - 2026-05-09
 
 ### Changed
