@@ -1,4 +1,4 @@
-from scripts.pipeline import build_parser
+from scripts.pipeline import build_parser, research_questions
 
 
 def test_article_parser_accepts_sources():
@@ -28,3 +28,12 @@ def test_code_explanation_parser_accepts_sources():
     parser = build_parser()
     ns = parser.parse_args(["code-explanation", "--title", "Code", "--sources", "app.py"])
     assert ns.audience == "developers"
+
+
+def test_research_questions_include_goal_and_respect_depth():
+    questions = research_questions("launch plan", 3)
+    assert questions == [
+        "What evidence directly supports this goal: launch plan?",
+        "What are the most important source-grounded findings?",
+        "Which evidence supports each finding?",
+    ]

@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.3] - 2026-05-10
+
+### Changed
+
+- Added coverage for Powered Mode question generation.
+- Bumped version to 0.1.3.
+
 ## [0.1.2] - 2026-05-10
 
 ### Changed
