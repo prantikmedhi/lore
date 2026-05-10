@@ -8,6 +8,17 @@ import sys
 from pathlib import Path
 
 
+def dedupe_sources(sources: list[str]) -> list[str]:
+    seen: set[str] = set()
+    unique: list[str] = []
+    for source in sources:
+        if source in seen:
+            continue
+        seen.add(source)
+        unique.append(source)
+    return unique
+
+
 def classify(value: str) -> str:
     path = Path(value)
     if path.exists():
@@ -25,14 +36,15 @@ def main() -> int:
     parser.add_argument("--sources", nargs="+", required=True)
     parser.add_argument("--output", required=True)
     ns = parser.parse_args()
+    sources = dedupe_sources(ns.sources)
     payload = {
         "title": ns.title,
         "language": "en",
-        "sources": [{"kind": classify(source), "value": source} for source in ns.sources],
+        "sources": [{"kind": classify(source), "value": source} for source in sources],
     }
     Path(ns.output).parent.mkdir(parents=True, exist_ok=True)
     Path(ns.output).write_text(json.dumps(payload, indent=2, ensure_ascii=True), encoding="utf-8")
-    print(json.dumps({"created": ns.output, "source_count": len(ns.sources)}, indent=2))
+    print(json.dumps({"created": ns.output, "source_count": len(sources)}, indent=2))
     return 0
 
 

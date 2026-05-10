@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.5] - 2026-05-11
+
+### Changed
+
+- `lore-source-manifest` now deduplicates repeated sources while preserving order.
+- Bumped version to 0.1.5.
+
 ## [0.1.4] - 2026-05-10
 
 ### Changed
