@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.4] - 2026-05-10
+
+### Changed
+
+- `lore manifest` now creates parent directories for `--output` paths.
+- Bumped version to 0.1.4.
+
 ## [0.1.3] - 2026-05-10
 
 ### Changed

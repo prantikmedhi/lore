@@ -92,6 +92,7 @@ def cmd_manifest(ns: argparse.Namespace) -> int:
         "artifacts": ns.artifacts,
     }
     if ns.output:
+        Path(ns.output).parent.mkdir(parents=True, exist_ok=True)
         Path(ns.output).write_text(json.dumps(payload, indent=2, ensure_ascii=True), encoding="utf-8")
     emit(payload)
     return 0
