@@ -20,6 +20,17 @@ def emit(payload: dict[str, Any] | list[Any]) -> None:
     print(json.dumps(payload, indent=2, ensure_ascii=True))
 
 
+def classify_source(value: str) -> str:
+    path = Path(value)
+    if path.exists():
+        return "file"
+    if value.startswith(("http://", "https://")):
+        if "youtube.com" in value or "youtu.be" in value:
+            return "youtube"
+        return "url"
+    return "text"
+
+
 def run_upstream(args: list[str], dry_run: bool = False) -> int:
     command = ["uvx", "--from", "notebooklm-skill", "notebooklm-skill", *args]
     if dry_run:
@@ -73,14 +84,7 @@ def cmd_summarize(ns: argparse.Namespace) -> int:
 
 def cmd_manifest(ns: argparse.Namespace) -> int:
     output_dir = Path(ns.output_dir)
-    source_items = []
-    for source in ns.sources:
-        kind = "url"
-        if Path(source).exists():
-            kind = "file"
-        elif "\n" in source or len(source) > 500:
-            kind = "text"
-        source_items.append({"kind": kind, "value": source})
+    source_items = [{"kind": classify_source(source), "value": source} for source in ns.sources]
     payload = {
         "title": ns.title,
         "language": "en",
