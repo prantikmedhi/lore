@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 This project follows Semantic Versioning. Dates use `YYYY-MM-DD`.
 
+## [0.1.8] - 2026-05-13
+
+### Changed
+
+- `lore-source-manifest` now treats `file://` and `~`-expanded local paths as files, matching `lore manifest`.
+- Bumped version to 0.1.8.
+
 ## [0.1.7] - 2026-05-13
 
 ### Changed

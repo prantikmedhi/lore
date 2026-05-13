@@ -6,6 +6,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
+from urllib.parse import unquote
 
 
 def dedupe_sources(sources: list[str]) -> list[str]:
@@ -20,7 +21,12 @@ def dedupe_sources(sources: list[str]) -> list[str]:
 
 
 def classify(value: str) -> str:
-    path = Path(value)
+    if value.startswith("file://"):
+        path = Path(unquote(value[7:])).expanduser()
+        if path.exists():
+            return "file"
+
+    path = Path(value).expanduser()
     if path.exists():
         return "file"
     if value.startswith(("http://", "https://")):
