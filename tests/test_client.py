@@ -2,11 +2,14 @@ from scripts.notebooklm_client import build_parser
 import json
 
 
-def test_manifest_writes_nested_output(tmp_path):
+def test_manifest_writes_nested_output(tmp_path, monkeypatch):
     parser = build_parser()
     out = tmp_path / "nested" / "manifest.json"
     note = tmp_path / "note.txt"
     note.write_text("hello", encoding="utf-8")
+    home_note = tmp_path / "home-note.txt"
+    home_note.write_text("hello", encoding="utf-8")
+    monkeypatch.setenv("HOME", str(tmp_path))
     ns = parser.parse_args(
         [
             "manifest",
@@ -14,6 +17,7 @@ def test_manifest_writes_nested_output(tmp_path):
             "Research",
             "--sources",
             str(note),
+            "~/home-note.txt",
             "Quick context",
             "https://example.com",
             "--output",
@@ -25,8 +29,8 @@ def test_manifest_writes_nested_output(tmp_path):
     assert out.exists()
     data = json.loads(out.read_text())
     assert data["title"] == "Research"
-    assert data["source_count"] == 3
-    assert [source["kind"] for source in data["sources"]] == ["file", "text", "url"]
+    assert data["source_count"] == 4
+    assert [source["kind"] for source in data["sources"]] == ["file", "file", "text", "url"]
 
 
 def test_powered_parser_accepts_sources():

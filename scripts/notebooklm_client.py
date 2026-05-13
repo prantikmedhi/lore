@@ -21,7 +21,10 @@ def emit(payload: dict[str, Any] | list[Any]) -> None:
 
 
 def classify_source(value: str) -> str:
-    path = Path(value)
+    if value.startswith("file://"):
+        return "file"
+
+    path = Path(value).expanduser()
     if path.exists():
         return "file"
     if value.startswith(("http://", "https://")):
