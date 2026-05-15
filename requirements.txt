@@ -1,5 +1,5 @@
 notebooklm-py>=0.3.4
-fastmcp>=3.2.4
+fastmcp>=3.3.0
 feedparser>=6.0.11
 playwright>=1.44.0
 python-pptx>=0.6.23
