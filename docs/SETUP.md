@@ -20,7 +20,7 @@ This guide explains how to install Lore, authenticate NotebookLM, verify CLI com
 From the repository root:
 
 ```bash
-pip install -e .
+pip install -e 
 python3 -m playwright install chromium
 ```
 
