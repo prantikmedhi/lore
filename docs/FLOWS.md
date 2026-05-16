@@ -16,6 +16,8 @@ lore ask \
 
 ## Flow 2 — Research pack → report + deck + study pack
 
+
+
 ```bash
 lore-pipeline generate-all \
   --title "Research Pack" \
