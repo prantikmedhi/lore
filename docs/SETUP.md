@@ -2,6 +2,8 @@
 
 This guide explains how to install Lore, authenticate NotebookLM, verify CLI commands, configure MCP clients, and generate the main artifact types.
 
+
+
 ## 1. Requirements
 
 | Requirement | Purpose |
