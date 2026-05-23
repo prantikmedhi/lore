@@ -5,6 +5,8 @@ description: Use this skill for NotebookLM structured research, cited answers, r
 
 # Lore Skill
 
+
+
 Target locale: `en`. Do not add personal credits, author praise, attribution blocks, or off-locale output. Keep all outputs professional, neutral, concise where possible, and source-grounded.
 
 Lore is a NotebookLM automation workflow for AI assistants. It turns raw source material into reliable research and reusable artifacts. Use this skill when a user wants research over URLs, PDFs, YouTube links, files, pasted text, repository notes, architecture docs, code excerpts, or any source set that should be summarized, questioned, cited, transformed, or packaged.
